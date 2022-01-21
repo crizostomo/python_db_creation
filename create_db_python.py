@@ -1,6 +1,10 @@
 import mysql.connector
-mydb = mysql.connector.connect(host="localhost", user="root", database="staff")
+mydb = mysql.connector.connect(host="localhost", user="root")
+
+if(mydb):
+    print("Connection Successful")
+else:
+    print("Connection Unsuccessful")
 
 mycursor = mydb.cursor()
-
-mycursor.execute("Create table employee (name varchar(200), sal int(20))")
+mycursor.execute("Create database staff")
